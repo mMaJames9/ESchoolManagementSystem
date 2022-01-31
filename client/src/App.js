@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, {useState} from 'react'
+import 'bootstrap';
 
 import './assets/css/bootstrap.css'
 import './assets/css/font.css'
@@ -15,33 +16,36 @@ import OneStudent from './components/OneStudent'
 
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
 
+
 function App() {
 
-  const [sidebar, setSidebar] = useState(false);
-  const showSidebar = () => setSidebar(!sidebar);
-
   let url="#"
+
+  const [isActive, setActive] = useState("false");
+  const handleToggle = () => {
+    setActive(!isActive);
+  };
   
   return (
     
-<div class="App">
-<BrowserRouter>
-
-<div id="sidebar" class="active">
-    <div class="sidebar-wrapper active">
-        <div class="sidebar-header">
-            <div class="d-flex justify-content-between">
-                <div class="logo">
-                    <a href={url}>
-                        <h2 class="h2">E-Keyce</h2>
-                    </a>
-                </div>
-                
-                <div class="toggler">
-                    <a href={url} class="sidebar-hide d-xl-none d-block" onClick={showSidebar}>
-                        <i class="bi bi-x bi-middle"></i>
-                    </a>
-                </div>
+    <div class="App">
+    <BrowserRouter>
+    
+    <div id="sidebar" class={isActive ? "active" : null}>
+        <div class="sidebar-wrapper active">
+            <div class="sidebar-header">
+                <div class="d-flex justify-content-between">
+                    <div class="logo">
+                        <a href={url}>
+                            <h2 class="h2">E-Keyce</h2>
+                        </a>
+                    </div>
+                    
+                    <div class="toggler">
+                        <a href={url} class="sidebar-hide d-xl-none d-block" onClick={() => handleToggle()}>
+                            <i class="bi bi-x bi-middle"></i>
+                        </a>
+                    </div>
                 
             </div>
         </div>
@@ -86,7 +90,7 @@ function App() {
 
 <div id="main">
     <header class="mb-3">
-        <a href={url} class="burger-btn d-block d-xl-none">
+        <a href={url} class="burger-btn d-block d-xl-none" onClick={() => handleToggle()}>
             <i class="bi bi-justify fs-3"></i>
         </a>
     </header>
