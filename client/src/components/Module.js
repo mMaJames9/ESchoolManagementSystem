@@ -3,11 +3,9 @@ import axios from 'axios'
 // import React from 'react'
 
 import '../assets/css/bootstrap.css'
-import '../assets/vendors/iconly/bold.css'
-import '../assets/vendors/perfect-scrollbar/perfect-scrollbar.css'
-import '../assets/vendors/bootstrap-icons/bootstrap-icons.css'
+import '../assets/css/font.css'
 import '../assets/css/app.css'
-import '../assets/vendors/iconly/bold.css'
+import '../assets/css/bootstrap-icons.css'
 
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
