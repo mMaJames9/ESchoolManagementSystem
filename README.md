@@ -27,7 +27,7 @@ L'application développé permet l'enregistrement des étudiants, des professeur
 
 - - - - -
 
-## Quelles images du projet
+## Quelques images du projet
 
 ![Alt text](/home.png?raw=true "Page d'Accueil")
 ![Alt text](/etudiants.png?raw=true "Interface des Etudiants")
