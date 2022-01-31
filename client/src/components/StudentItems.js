@@ -4,10 +4,12 @@ import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import {Link} from 'react-router-dom'
 
+
 export default function StudentItems(props) {
-    const { studentList, serch,getAll } = props
+    // const history = useHistory()
+    const {studentList,serch, getAll} =props
     toast.configure()
-    function deleteStudent(id) {
+    function deleteStudent(id){
         axios.delete(process.env.REACT_APP_API_URL + 'student/' + id)
             .then(response => {
                 console.log(response.data);
